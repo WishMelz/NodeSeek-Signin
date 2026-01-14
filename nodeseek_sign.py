@@ -403,7 +403,7 @@ if __name__ == "__main__":
 
     env_type = detect_environment()
     print(f"当前运行环境: {env_type}")
-    print(f"当前运行环境2: {IMPERSONATE_VERSION}")
+    print(f"指纹: {IMPERSONATE_VERSION}")
     accounts = []
 
     # 先收集账号密码配置
@@ -541,6 +541,7 @@ if __name__ == "__main__":
             print("所有Cookie已成功保存")
         except Exception as e:
             print(f"保存Cookie变量异常: {e}")
+
 
 
 
