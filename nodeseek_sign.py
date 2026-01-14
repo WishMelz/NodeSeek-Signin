@@ -9,7 +9,7 @@ from yescaptcha import YesCaptchaSolver, YesCaptchaSolverError
 from turnstile_solver import TurnstileSolver, TurnstileSolverError
 
 # 统一 impersonate 版本，可通过环境变量 NS_IMPERSONATE 覆盖
-IMPERSONATE_VERSION = os.getenv("NS_IMPERSONATE", "chrome136")
+IMPERSONATE_VERSION = os.getenv("NS_IMPERSONATE", "chrome110")
 # ---------------- 通知模块动态加载 ----------------
 hadsend = False
 send = None
@@ -540,3 +540,4 @@ if __name__ == "__main__":
             print("所有Cookie已成功保存")
         except Exception as e:
             print(f"保存Cookie变量异常: {e}")
+
