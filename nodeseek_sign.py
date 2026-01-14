@@ -256,7 +256,7 @@ def sign(ns_cookie, ns_random):
     }
     try:
         url = f"https://www.nodeseek.com/api/attendance?random={ns_random}"
-        response = requests.post(url, headers=headers, impersonate="chrome110")
+        response = requests.post(url, headers=headers, impersonate=IMPERSONATE_VERSION)
         
         if response.status_code == 403:
             print("[ERROR] 403 Forbidden - 仍被 Cloudflare 阻拦")
@@ -541,6 +541,7 @@ if __name__ == "__main__":
             print("所有Cookie已成功保存")
         except Exception as e:
             print(f"保存Cookie变量异常: {e}")
+
 
 
 
